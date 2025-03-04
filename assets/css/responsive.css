@@ -1,0 +1,532 @@
+/* Base responsive styles */
+:root {
+    --header-height: 170px;
+    --menu-padding: 30px;
+    --primary-color: #ff4b4b;
+    --secondary-color: #ff8c8c;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ff4b4b;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger.m-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.m-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.m-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile First Approach */
+@media screen and (max-width: 768px) {
+    .m-width {
+        margin-inline: 20px;
+    }
+
+    header .max-width {
+        margin-inline: 20px;
+        gap: 20px;
+    }
+    #license {
+        flex-direction: column;
+        margin: 20px;
+        gap: 30px;
+        align-items: center;
+    }
+
+    #license > div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .license-img::before {
+        display: none;
+    }
+
+    .reason-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #reason #card {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #obtain .cards {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    #obtain .card {
+        width: 100%;
+        height: 300px;
+    }
+
+    .fee {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    #fee .cards {
+        flex-direction: column;
+    }
+
+    .fee .top{
+        font-size: 30px !important;
+    }
+
+    .cards .price, .time{
+        font-size: 20px !important;
+    }
+    .tick {
+        font-size: 24px !important;
+    }
+
+    .imagecarousel .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #voice .imagecarousel .cards {
+        flex-wrap: nowrap !important;
+    }
+
+    .text {
+        flex-direction: column;
+    }
+
+    .addinfo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #guidance .m-width > div {
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .react-card {
+        width: 85%;
+    }
+
+}
+
+/* Tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .m-width {
+        margin-inline: 50px;
+    }
+
+    header .max-width {
+        margin-inline: 30px;
+    }
+
+    .menu {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    #license {
+        margin: 50px;
+    }
+
+    #reason #card {
+        width: 450px;
+    }
+
+    #obtain .cards {
+        gap: 30px;
+    }
+
+    #obtain .card {
+        width: 350px;
+    }
+
+    .fee {
+        width: 300px !important;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    .m-width {
+        margin-inline: auto;
+        max-width: 1200px;
+    }
+
+    header .max-width {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Common Responsive Features */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+    .text-section h1 {
+        font-size: 24px;
+    }
+
+    .text-section p {
+        font-size: 14px;
+    }
+
+    #card .title {
+        font-size: 16px;
+    }
+    #guidance {
+        height: 1600px;
+    }
+    #footer .addinfo > div:last-child ul{
+        list-style-type: none;
+        margin-top: 10px;
+    }
+}
+
+/* Responsive Grid System */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Responsive Tables */
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Responsive Forms */
+input, select, textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Videos */
+video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    #footer {
+        text-align: center;
+    }
+
+    .f-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .f-text > div {
+        width: 100%;
+    }
+}
+
+/* Animation Optimizations for Mobile */
+@media screen and (max-width: 768px) {
+    #obtain .imagecarousel {
+        animation: none;
+    }
+    #obtain {
+        height: 3850px;
+        margin-inline: 30px;
+    }
+}
+
+/* Add these styles after the existing mobile menu toggle styles */
+
+.menu-toggle {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-toggle span:nth-child(3) {
+    bottom: 0;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 11px;
+}
+
+
+/* Add smooth transition for all interactive elements */
+a, button, .menu-toggle, .menus {
+    transition: all 0.3s ease;
+}
+
+/* Improve touch targets on mobile */
+@media screen and (max-width: 768px) {
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px;
+    }
+} 
+
+
+/* ///////////////////// */
+@media screen and (max-width: 1670px) {
+    .container .s-width{
+        margin-inline: 100px;
+    }
+}
+
+@media screen and (max-width: 1405px) {
+    
+    #license {
+        gap: 0%;
+    }
+    .fee .top {        
+        font-size: 20px;
+    }
+    .fee .price {
+        font-size: 16px;
+    }
+    .fee .time {
+        font-size: 16px;
+    }
+    #card img{
+        width: 120px;
+        height: 120px;
+    }
+    #reason #card {
+        height: auto;
+    }
+
+} 
+
+@media screen and (max-width: 1386px) {
+    #license {
+        gap: 0%;
+    }
+    .addinfo > div:first-child{
+        display: none;        
+    }
+    #fee {
+        margin-inline: 50px;
+    }
+    .m-width{
+        margin-inline: 50px;
+    }
+} 
+
+@media screen and (max-width: 1260px) {
+    .menu {
+        gap:10px;
+        font-size: 14px;
+    }
+    .menu-btn {
+        font-size: 14px;
+        width: 85px;
+    }
+    #license {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    .license-img img {
+        object-fit: contain;
+    }
+} 
+@media screen and (max-width: 1170px) {
+    .cards .price, .time{
+        font-size: 14px;
+    }
+    .tick {
+        font-size: 14px;
+    }
+    .time span:last-child {
+        padding-left: 5px;
+    }
+    #fee .cards {
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 1040px) {
+    .menu, .menu-btn {
+        display: none;
+    }
+    .menu-item {
+        display: flex;
+    }
+    .reason-card {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #fee .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .up{
+        margin-top: 0px !important;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: fixed;
+        top: 45px;
+        right: 0;
+        width: 190px;
+        border-radius: 30px 0px 0px 30px;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    .menu.m-active {
+        display: block;
+    }
+
+    .menu li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+    .container .s-width{
+        margin-inline: 50px;
+    }
+    .react-card {
+        width: 45%;
+    }
+} 
+@media screen and (max-width: 900px) {
+    #privacy .part img{
+        max-width: 200px;
+        margin-top: 20px;
+    }
+    .image-grid {
+        flex-wrap: wrap;
+    }
+    .image-pair {
+        scale: 1.2;
+    } 
+}
+@media screen and (max-width: 800px) {
+    #enroll .step {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .company-images {
+        display: none;
+    }
+
+}
+@media screen and (max-width: 675px) {
+    .react-card {
+        width: 85%;
+        height: auto;
+    }
+    #privacy .part{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .part img {
+        width: 100%;
+        max-width: none !important;
+    }
+    .l-box{
+        display: none;
+    }
+    .part {
+        gap: 0px;
+    }
+    .image-pair {
+        scale: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+    .image-grid {
+        gap: 10px;
+    }
+    .nine {
+        flex-wrap: wrap;
+    }
+
+    .nine > div {
+        width: 100%;
+    }
+
+
+}
