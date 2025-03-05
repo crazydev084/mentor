@@ -9,6 +9,7 @@
     box-sizing: border-box;
     font-family: NotoSansJP;
     scroll-behavior: smooth;
+    transition: all 0.3s ease-out;
 }
 
 .logo img {
@@ -430,6 +431,7 @@ main {
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -440,6 +442,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.online-attend > a {
+    text-decoration: none;
 }
 
 .online-attend .btn {
@@ -562,6 +568,10 @@ main {
 }
 
 /* news */
+#news a {
+    text-decoration: none;
+    color: #666;
+}
 
 #news .text-section {
     text-align: center;
@@ -571,6 +581,20 @@ main {
     display: flex;
     gap: 10px;
     padding-block: 10px;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.more {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: center;
 }
 
 .row{
@@ -610,7 +634,7 @@ main {
     padding-block: 20px;
 }
 
-#option .btn{
+#option a{
     margin-inline: auto;
 }
 
@@ -627,7 +651,7 @@ main {
     margin-block: 30px;
 }
 
-#card button{
+#option .cards #card a{
     border-radius: 30px;
     border: #ff4b4b 2px solid;
     text-align: center;
@@ -635,6 +659,7 @@ main {
     padding: 10px 20px;
     background-color: white;
     cursor: pointer;
+    text-decoration: none;
 }
 
 /* guidance */
@@ -688,7 +713,7 @@ main {
     
     line-height: 1.8;
 }
-#footer > div:last-child {
+#footer .btext {
     text-align: center;
 }
 
@@ -1050,4 +1075,14 @@ main {
     justify-content: center;
     gap: 20px;
 }
+
+.wow {
+    visibility: hidden;
+}
+
+.wow {
+    --animate-duration: 1s;
+    --animate-delay: 0s;
+}
+
 

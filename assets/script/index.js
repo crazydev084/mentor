@@ -73,17 +73,3 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
-
-// Back to top button
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 300) {
-        $('#back-to-top').addClass('show');
-    } else {
-        $('#back-to-top').removeClass('show');
-    }
-});
-
-$('#back-to-top').click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop: 0}, 'smooth');
-});
