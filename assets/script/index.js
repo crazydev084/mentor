@@ -1,10 +1,9 @@
-// Load header content
-$(document).ready(function() {
-    $("#header-container").load("header.html");
-});
 
 // Hamburger Menu Toggle
 $(document).ready(function() {
+    $('img[usemap]').rwdImageMaps();
+    // $("#header-container").load("header.html");
+
     $('.hamburger').click(function() {
         $(this).toggleClass('m-active');
         $('.menu').toggleClass('m-active');
@@ -17,6 +16,7 @@ $(document).ready(function() {
             $('.menu').removeClass('m-active');
         }
     });
+        
 });
 
 var coll = document.getElementsByClassName("collapsible");

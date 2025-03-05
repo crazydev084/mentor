@@ -852,7 +852,7 @@ main {
 
 .company-images img {
     display: flex;
-    width: 100vw;
+    width: 1000px;
     height: 400px;
     object-fit: cover;
     position: absolute;

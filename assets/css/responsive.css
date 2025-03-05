@@ -189,11 +189,6 @@
     height: auto;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Responsive Typography */
 @media screen and (max-width: 768px) {
     .text-section h1 {
