@@ -466,7 +466,23 @@ a, button, .menu-toggle, .menus {
         width: 45%;
     }
 } 
-@media screen and (max-width: 900px) {
+
+@media screen and (max-width: 950px) {
+    .right-step::after, .right-step::before {
+        display: none;
+    }
+    .left-step::after, .left-step::before {
+        display: none;
+    }
+    .flow-path::before {
+        display: none;
+    }
+    .start-point, .end-point {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
     #privacy .part img{
         max-width: 200px;
         margin-top: 20px;
@@ -477,6 +493,21 @@ a, button, .menu-toggle, .menus {
     .image-pair {
         scale: 1.2;
     } 
+    .flow-path {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .step-item .number{
+        margin-top: 14px;
+
+    }
+    .step-content {
+        display: flex;
+        padding-block: auto;
+        height: 100px;
+    }
+
 }
 @media screen and (max-width: 800px) {
     #enroll .step {
@@ -486,6 +517,7 @@ a, button, .menu-toggle, .menus {
     .company-images {
         display: none;
     }
+ 
 
 }
 @media screen and (max-width: 675px) {
@@ -521,6 +553,21 @@ a, button, .menu-toggle, .menus {
 
     .nine > div {
         width: 100%;
+    }
+
+    .flow-path {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .flow-step {
+        width: 365px;
+    }
+    .step-item p {
+        font-size: 18px;
     }
 
 

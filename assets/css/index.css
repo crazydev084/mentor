@@ -217,7 +217,7 @@ main {
 /* obtain */
 #obtain{
     width: auto;
-    height: 700px;    
+    height: 2000px;    
     padding-top: 70px;
 }
 
@@ -262,37 +262,52 @@ main {
 }
 
 /* enroll */
-.m-width > .text-section {
-    text-align: center;
+/* obtain */
+#obtain{
+    width: auto;
+    height: 2000px;    
+    padding-top: 70px;
 }
 
-#enroll img {
-    width: 460px;
-    height: 200px;
+#obtain .cards{
+    display: flex;        
+    gap: 70px;
+    justify-content: center;
+}
+
+#obtain .card {
+    background-color: white;
+    width: 450px;
+    height: 450px;
+    position: relative;
     border-radius: 30px;
-    object-fit:cover;
+    overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.rounded {
-    border-radius: 100px !important;
+#obtain .card img{
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;    
 }
 
-#enroll .step{
+.card div{
+    position: absolute;
+    font-size: 24px;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #FD9284;
+    color: white;
+    text-align: center;
+    justify-content: center;
     display: flex;
     align-items: center;
-    gap: 65px;
 }
 
-#enroll .text-section > :first-child {
-    color: #ff4b4b;
-    font-weight: bold;
+#obtain .text-section{
+    text-align: center;
 }
-
-#enroll > .m-width > div {
-    margin-block: 10px;
-}
-
 /* fee */
 #fee{
     margin-inline: 150px;
@@ -1083,6 +1098,177 @@ main {
 .wow {
     --animate-duration: 1s;
     --animate-delay: 0s;
+}
+
+.license-flow {
+    position: relative;
+    padding: 40px 20px;
+    background: #FFF6F6;
+}
+
+.flow-path {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.flow-path::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 6px;
+    height: 100%;
+    background: #FF8C8C;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+.flow-step {
+    position: relative;
+    margin-bottom: 60px;
+    width: 45%;
+}
+
+.left-step {
+    margin-right: auto;
+}
+
+.right-step {
+    margin-left: auto;
+}
+
+.flow-step h3 {
+    color: #FF4B4B;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.step-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+}
+
+.step-item .number {
+    background: #FF8C8C;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    padding-left: 0px;
+    font-size: 30px;
+}
+
+.step-item p {
+    margin: 0;
+    font-size: 20px;
+    padding-left: 60px;
+}
+
+.start-point, .end-point {
+    text-align: center;
+}
+
+.point-box {
+    display: inline-block;
+    background: #FF8C8C;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.point-box h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.success-box {
+    text-align: center;
+    padding: 20px;
+}
+
+.success-box h3 {
+    color: #FF4B4B;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.license-success {
+    background: #FF8C8C;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 30px;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+.license-success h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.flow-step::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    width: 20px;
+    height: 20px;
+    background: #FF8C8C;
+    border-radius: 50%;
+}
+
+.left-step::after {
+    right: -58px;
+}
+
+.right-step::after {
+    left: -59px;
+}
+
+.flow-step::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 6px;
+    background: #FF8C8C;
+}
+
+.left-step::before {
+    right: -50px;
+}
+
+.right-step::before {
+    left: -50px;
 }
 
 
