@@ -1127,8 +1127,12 @@ main {
 
 .flow-step {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
     width: 45%;
+}
+
+.green {
+    background-color: #0AD457 !important;
 }
 
 .left-step {
