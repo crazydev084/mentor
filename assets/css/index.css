@@ -658,9 +658,16 @@ main {
     text-align: center;
     margin-block: auto;
     padding: 10px 20px;
+    color: black;
     background-color: white;
     cursor: pointer;
     text-decoration: none;
+}
+
+#option .cards #card a:hover{    
+    color: #ff4b4b;
+    scale: 1.1;
+    transform: translate(0.4);   
 }
 
 /* guidance */
@@ -734,7 +741,11 @@ main {
     text-decoration: none;
     color: white;
 }
-
+.addinfo a:hover{    
+    color: #ff4b4b;
+    scale: 1.1;
+    transform: translate(0.4);   
+}
 
 .f-text > div{
     margin-bottom: 10px;

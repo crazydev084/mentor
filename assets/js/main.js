@@ -27,9 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > lastScrollTop) {
+            console.log("up");
             navbar.classList.remove('nav-down');
             navbar.classList.add('nav-up');
         } else {
+            console.log("down");
             navbar.classList.remove('nav-up');
             navbar.classList.add('nav-down');
         }
